@@ -4,7 +4,7 @@
    License: none (public domain)
 */
 /* Google fonts */
-@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -74,8 +74,8 @@ html, body {
 	color: @prim-white;
 }
 
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Lexend Deca', sans-serif;
+h1,h2,h3,h4,h5 {
+	font-family: 'Lobster', sans-serif;
 }
 /* Header */
 #mainHeader {
@@ -171,9 +171,15 @@ h1,h2,h3,h4,h5,h6 {
 		flex-direction: column;
 		justify-content: space-evenly;
 
-		.leftColumnAnchor {
-			color: @prim-white;
+		.leftColumnLi {
+			padding-top: 15px;
+
+			.leftColumnAnchor {
+				color: @prim-white;
+			}
 		}
+
+
 	}
 }
 #rightColumnContainer {
@@ -220,11 +226,16 @@ h1,h2,h3,h4,h5,h6 {
 		color: #000;
 	}
 }
-.personalInformation {
+.personalInformation.two,
+.personalInformation.three {
+	padding-top: 0px;
+}
+.personalInformation,
+.personalInformation.one {
 	padding: 40px;
 
 	.rightColumnInformationTitle {
-		font-size: 20px;
+		font-size: 24px;
 		padding-bottom: 20px;
 		width: 100%;
 	}
@@ -238,16 +249,19 @@ h1,h2,h3,h4,h5,h6 {
 	.rightColumnTextContent {
 		letter-spacing: 1px;
 		line-height: 20px;
+		font-size: 14px;
 	}
 	.workInformation {
 		display: flex;
 		flex-flow: row wrap;
+		justify-content: space-between;
 
 		.employerInformation {
 			width: 27%;
 			border-right: 1px solid #000;
 			margin-right: 10px;
 			position: relative;
+			padding-top: 20px;
 
 			&:before {
 				width: 10px;
@@ -262,14 +276,26 @@ h1,h2,h3,h4,h5,h6 {
 
 			.jobTitle {
 				padding-bottom: 10px;
+				font-size: 14px;
+				font-weight: 600;
 			}
 			.employmentInfoirmation {
 				padding-bottom: 10px;
+				font-size: 12px;
 			}
 		}
 
 		.aboutTheJobInformation {
-			width: 70%;
+			width: 68%;
+			display: flex;
+			align-content: center;
+
+			p {
+				font-size: 12px;
+				line-height: 20px;
+				display: flex;
+				align-items: center;
+			}
 		}
 	}
 }

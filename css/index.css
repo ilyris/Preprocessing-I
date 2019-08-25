@@ -4,11 +4,11 @@
 */
 /* Google fonts */
 @font-face {
-  font-family: 'Lexend Deca';
+  font-family: 'Lobster';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Lexend Deca Regular'), local('LexendDeca-Regular'), url(https://fonts.gstatic.com/s/lexenddeca/v1/K2F1fZFYk-dHSE0UPPuwQ5qnJyo.ttf) format('truetype');
+  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v22/neILzCirqoswsqX9zoKmNg.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Montserrat';
@@ -162,9 +162,8 @@ h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
-  font-family: 'Lexend Deca', sans-serif;
+h5 {
+  font-family: 'Lobster', sans-serif;
 }
 /* Header */
 #mainHeader {
@@ -252,7 +251,10 @@ h6 {
   flex-direction: column;
   justify-content: space-evenly;
 }
-.topDoubleInformationContainer .leftColumnUl .leftColumnAnchor {
+.topDoubleInformationContainer .leftColumnUl .leftColumnLi {
+  padding-top: 15px;
+}
+.topDoubleInformationContainer .leftColumnUl .leftColumnLi .leftColumnAnchor {
   color: #fff;
 }
 #rightColumnContainer {
@@ -296,36 +298,50 @@ h6 {
 #rightColumnContainer .rightInformationContainer {
   color: #000;
 }
-.personalInformation {
+.personalInformation.two,
+.personalInformation.three {
+  padding-top: 0px;
+}
+.personalInformation,
+.personalInformation.one {
   padding: 40px;
 }
-.personalInformation .rightColumnInformationTitle {
-  font-size: 20px;
+.personalInformation .rightColumnInformationTitle,
+.personalInformation.one .rightColumnInformationTitle {
+  font-size: 24px;
   padding-bottom: 20px;
   width: 100%;
 }
-.personalInformation span {
+.personalInformation span,
+.personalInformation.one span {
   width: 30px;
   height: 3px;
   background-color: #1d254a;
   display: block;
   margin-bottom: 20px;
 }
-.personalInformation .rightColumnTextContent {
+.personalInformation .rightColumnTextContent,
+.personalInformation.one .rightColumnTextContent {
   letter-spacing: 1px;
   line-height: 20px;
+  font-size: 14px;
 }
-.personalInformation .workInformation {
+.personalInformation .workInformation,
+.personalInformation.one .workInformation {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
 }
-.personalInformation .workInformation .employerInformation {
+.personalInformation .workInformation .employerInformation,
+.personalInformation.one .workInformation .employerInformation {
   width: 27%;
   border-right: 1px solid #000;
   margin-right: 10px;
   position: relative;
+  padding-top: 20px;
 }
-.personalInformation .workInformation .employerInformation:before {
+.personalInformation .workInformation .employerInformation:before,
+.personalInformation.one .workInformation .employerInformation:before {
   width: 10px;
   height: 10px;
   border-radius: 50px;
@@ -335,12 +351,27 @@ h6 {
   right: -5px;
   top: 40%;
 }
-.personalInformation .workInformation .employerInformation .jobTitle {
+.personalInformation .workInformation .employerInformation .jobTitle,
+.personalInformation.one .workInformation .employerInformation .jobTitle {
   padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
 }
-.personalInformation .workInformation .employerInformation .employmentInfoirmation {
+.personalInformation .workInformation .employerInformation .employmentInfoirmation,
+.personalInformation.one .workInformation .employerInformation .employmentInfoirmation {
   padding-bottom: 10px;
+  font-size: 12px;
 }
-.personalInformation .workInformation .aboutTheJobInformation {
-  width: 70%;
+.personalInformation .workInformation .aboutTheJobInformation,
+.personalInformation.one .workInformation .aboutTheJobInformation {
+  width: 68%;
+  display: flex;
+  align-content: center;
+}
+.personalInformation .workInformation .aboutTheJobInformation p,
+.personalInformation.one .workInformation .aboutTheJobInformation p {
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
 }
