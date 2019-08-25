@@ -147,6 +147,16 @@ table {
   box-sizing: border-box;
   text-decoration: none;
 }
+/* Mix-ins */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
 html,
 body {
   height: 100%;
@@ -164,6 +174,13 @@ h3,
 h4,
 h5 {
   font-family: 'Lobster', sans-serif;
+}
+a {
+  transition: all ease-in-out 150ms;
+  color: #fff;
+}
+a:hover {
+  color: #029cf5;
 }
 /* Header */
 #mainHeader {
@@ -253,9 +270,7 @@ h5 {
 }
 .topDoubleInformationContainer .leftColumnUl .leftColumnLi {
   padding-top: 15px;
-}
-.topDoubleInformationContainer .leftColumnUl .leftColumnLi .leftColumnAnchor {
-  color: #fff;
+  font-size: 12px;
 }
 #rightColumnContainer {
   height: 900px;
@@ -328,8 +343,8 @@ h5 {
 }
 .personalInformation .workInformation,
 .personalInformation.one .workInformation {
-  display: flex;
   flex-flow: row wrap;
+  display: flex;
   justify-content: space-between;
 }
 .personalInformation .workInformation .employerInformation,

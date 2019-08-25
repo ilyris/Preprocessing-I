@@ -61,6 +61,18 @@ table {
 @secondary-gray-background: #9b9b9b;
 @prim-white: #fff;
 @primary-accent-color: #1d254a;
+@hover-color: rgb(2, 156, 245);
+/* Mix-ins */
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.flex-space-between {
+	display: flex;
+	justify-content: space-between;
+}
+
 
 
 html, body {
@@ -77,10 +89,16 @@ html, body {
 h1,h2,h3,h4,h5 {
 	font-family: 'Lobster', sans-serif;
 }
+a {
+	transition: all ease-in-out 150ms;
+	color: @prim-white;
+}
+a:hover {
+	color: @hover-color;
+}
 /* Header */
 #mainHeader {
-    display: flex;
-    justify-content: space-between;
+	.flex-space-between();
     width: 80%;
 	border-bottom: 1px solid #000;
 
@@ -138,17 +156,13 @@ h1,h2,h3,h4,h5 {
 .resumeLogoContainer {
     width: 100%;
     height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	.flex-center();
 	
 	h2 {
 		font-size: 40px;
 		width: 75px;
 		height: 75px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		.flex-center();
 		border-radius: 50px;
 		background-color: @prim-white;
 		color: @primary-accent-color;
@@ -173,10 +187,11 @@ h1,h2,h3,h4,h5 {
 
 		.leftColumnLi {
 			padding-top: 15px;
+			font-size: 12px;
 
-			.leftColumnAnchor {
-				color: @prim-white;
-			}
+			// .leftColumnAnchor {
+			// 	color: @prim-white;
+			// }
 		}
 
 
@@ -189,9 +204,7 @@ h1,h2,h3,h4,h5 {
 	width: 500px;
 	
 	#titleContainer {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		.flex-center();
 		flex-flow: row wrap;
 		background-color: @secondary-gray-background;
 
@@ -252,9 +265,8 @@ h1,h2,h3,h4,h5 {
 		font-size: 14px;
 	}
 	.workInformation {
-		display: flex;
 		flex-flow: row wrap;
-		justify-content: space-between;
+		.flex-space-between();
 
 		.employerInformation {
 			width: 27%;
