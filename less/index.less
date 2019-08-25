@@ -3,6 +3,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Montserrat&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,6 +25,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: 'Montserrat', sans-serif;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -50,10 +53,226 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	text-decoration: none;
 }
+
+@primary-light-gray-background: #cfcfcf;
+@secondary-gray-background: #9b9b9b;
+@prim-white: #fff;
+@primary-accent-color: #1d254a;
+
 
 html, body {
     height: 100%;
+    width: 100%;
+    background-color: #cfcfcf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	flex-direction: column;
+	color: @prim-white;
 }
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Lexend Deca', sans-serif;
+}
+/* Header */
+#mainHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+	border-bottom: 1px solid #000;
+
+	#mainLogo {
+		padding: 20px;
+		font-size: 26px;
+	}
+	/* Main Navigation */
+	#mainNav {
+		width: 60%;
+
+		#mainUl {
+			display: flex;
+			justify-content: space-evenly;
+
+			.mainLis {
+				padding: 20px;
+			
+				.mainAnchors {
+					text-decoration: none;
+					color: #000;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+/* Resume Content */
+#mainContainer {
+	width: 900px;
+    margin: auto;
+	height: 950px;
+	background-color: @prim-white;
+
+	#resumeContainer {
+		display: flex;
+		height: 100%;
+
+		#leftColumnContainer {
+			height: 100%;
+			width: 25%;
+			display: flex;
+			flex-flow: row wrap;
+			background-color: @primary-accent-color;
+		}
+
+		#rightColumnContainer {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			width: 75%;
+		}
+	}
+}
+.resumeLogoContainer {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	
+	h2 {
+		font-size: 40px;
+		width: 75px;
+		height: 75px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50px;
+		background-color: @prim-white;
+		color: @primary-accent-color;
+	}
+}
+.topDoubleInformationContainer {
+    width: 100%;
+    height: 35%;
+	text-align: right;
+	padding: 0 20px;
+	
+	.leftColumInformationContainer {
+		width: 100%;
+		font-size: 24px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid @prim-white;
+	}
+	.leftColumnUl {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+
+		.leftColumnAnchor {
+			color: @prim-white;
+		}
+	}
+}
+#rightColumnContainer {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+	width: 500px;
+	
+	#titleContainer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-flow: row wrap;
+		background-color: @secondary-gray-background;
+
+		.labelMe {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-flow: column;
+			height: 200px;
+		}
+		
+		 h2 {
+			font-size: 40px;
+			color: @primary-accent-color;
+			width: 100%;
+			text-align: center;
+			padding-bottom: 20px;
+		}
+		span {
+			width: 50px;
+			background-color: #000;
+			height: 3px;
+			margin: 0 auto;
+		}
+		 p {
+			font-size: 30px;
+			padding-top: 20px;
+			text-align: center;
+		}
+	}
+	.rightInformationContainer {
+		color: #000;
+	}
+}
+.personalInformation {
+	padding: 40px;
+
+	.rightColumnInformationTitle {
+		font-size: 20px;
+		padding-bottom: 20px;
+		width: 100%;
+	}
+	span {
+		width: 30px;
+		height: 3px;
+		background-color: @primary-accent-color;
+		display: block;
+		margin-bottom: 20px;
+	}
+	.rightColumnTextContent {
+		letter-spacing: 1px;
+		line-height: 20px;
+	}
+	.workInformation {
+		display: flex;
+		flex-flow: row wrap;
+
+		.employerInformation {
+			width: 27%;
+			border-right: 1px solid #000;
+			margin-right: 10px;
+			position: relative;
+
+			&:before {
+				width: 10px;
+				height: 10px;
+				border-radius: 50px;
+				content: " ";
+				position: absolute;
+				background-color: #000;
+				right: -5px;
+				top: 40%;
+			}
+
+			.jobTitle {
+				padding-bottom: 10px;
+			}
+			.employmentInfoirmation {
+				padding-bottom: 10px;
+			}
+		}
+
+		.aboutTheJobInformation {
+			width: 70%;
+		}
+	}
+}
+
+
 

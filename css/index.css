@@ -1,1 +1,346 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* Google fonts */
+@font-face {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lexend Deca Regular'), local('LexendDeca-Regular'), url(https://fonts.gstatic.com/s/lexenddeca/v1/K2F1fZFYk-dHSE0UPPuwQ5qnJyo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Montserrat', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #cfcfcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lexend Deca', sans-serif;
+}
+/* Header */
+#mainHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  border-bottom: 1px solid #000;
+  /* Main Navigation */
+}
+#mainHeader #mainLogo {
+  padding: 20px;
+  font-size: 26px;
+}
+#mainHeader #mainNav {
+  width: 60%;
+}
+#mainHeader #mainNav #mainUl {
+  display: flex;
+  justify-content: space-evenly;
+}
+#mainHeader #mainNav #mainUl .mainLis {
+  padding: 20px;
+}
+#mainHeader #mainNav #mainUl .mainLis .mainAnchors {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+/* Resume Content */
+#mainContainer {
+  width: 900px;
+  margin: auto;
+  height: 950px;
+  background-color: #fff;
+}
+#mainContainer #resumeContainer {
+  display: flex;
+  height: 100%;
+}
+#mainContainer #resumeContainer #leftColumnContainer {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #1d254a;
+}
+#mainContainer #resumeContainer #rightColumnContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.resumeLogoContainer {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.resumeLogoContainer h2 {
+  font-size: 40px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #1d254a;
+}
+.topDoubleInformationContainer {
+  width: 100%;
+  height: 35%;
+  text-align: right;
+  padding: 0 20px;
+}
+.topDoubleInformationContainer .leftColumInformationContainer {
+  width: 100%;
+  font-size: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+.topDoubleInformationContainer .leftColumnUl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.topDoubleInformationContainer .leftColumnUl .leftColumnAnchor {
+  color: #fff;
+}
+#rightColumnContainer {
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+#rightColumnContainer #titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  background-color: #9b9b9b;
+}
+#rightColumnContainer #titleContainer .labelMe {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  height: 200px;
+}
+#rightColumnContainer #titleContainer h2 {
+  font-size: 40px;
+  color: #1d254a;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#rightColumnContainer #titleContainer span {
+  width: 50px;
+  background-color: #000;
+  height: 3px;
+  margin: 0 auto;
+}
+#rightColumnContainer #titleContainer p {
+  font-size: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+#rightColumnContainer .rightInformationContainer {
+  color: #000;
+}
+.personalInformation {
+  padding: 40px;
+}
+.personalInformation .rightColumnInformationTitle {
+  font-size: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.personalInformation span {
+  width: 30px;
+  height: 3px;
+  background-color: #1d254a;
+  display: block;
+  margin-bottom: 20px;
+}
+.personalInformation .rightColumnTextContent {
+  letter-spacing: 1px;
+  line-height: 20px;
+}
+.personalInformation .workInformation {
+  display: flex;
+  flex-flow: row wrap;
+}
+.personalInformation .workInformation .employerInformation {
+  width: 27%;
+  border-right: 1px solid #000;
+  margin-right: 10px;
+  position: relative;
+}
+.personalInformation .workInformation .employerInformation:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  content: " ";
+  position: absolute;
+  background-color: #000;
+  right: -5px;
+  top: 40%;
+}
+.personalInformation .workInformation .employerInformation .jobTitle {
+  padding-bottom: 10px;
+}
+.personalInformation .workInformation .employerInformation .employmentInfoirmation {
+  padding-bottom: 10px;
+}
+.personalInformation .workInformation .aboutTheJobInformation {
+  width: 70%;
+}
