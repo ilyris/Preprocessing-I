@@ -168,6 +168,12 @@ body {
   flex-direction: column;
   color: #fff;
 }
+@media (max-width: 500px) {
+  html,
+  body {
+    height: auto;
+  }
+}
 h1,
 h2,
 h3,
@@ -190,12 +196,35 @@ a:hover {
   border-bottom: 1px solid #000;
   /* Main Navigation */
 }
+@media (max-width: 500px) {
+  #mainHeader {
+    width: 100%;
+    flex-flow: row wrap;
+  }
+}
+@media (max-width: 500px) {
+  #mainHeader #mainLogoContainer {
+    width: 100%;
+  }
+}
 #mainHeader #mainLogo {
   padding: 20px;
   font-size: 26px;
 }
+@media (max-width: 500px) {
+  #mainHeader #mainLogo {
+    width: 100%;
+    text-align: center;
+  }
+}
 #mainHeader #mainNav {
   width: 60%;
+}
+@media (max-width: 500px) {
+  #mainHeader #mainNav {
+    width: 100%;
+    text-align: center;
+  }
 }
 #mainHeader #mainNav #mainUl {
   display: flex;
@@ -216,9 +245,20 @@ a:hover {
   height: 950px;
   background-color: #fff;
 }
+@media (max-width: 500px) {
+  #mainContainer {
+    width: 100%;
+    height: auto;
+  }
+}
 #mainContainer #resumeContainer {
   display: flex;
   height: 100%;
+}
+@media (max-width: 500px) {
+  #mainContainer #resumeContainer {
+    flex-direction: column;
+  }
 }
 #mainContainer #resumeContainer #leftColumnContainer {
   height: 100%;
@@ -227,11 +267,26 @@ a:hover {
   flex-flow: row wrap;
   background-color: #1d254a;
 }
+@media (max-width: 500px) {
+  #mainContainer #resumeContainer #leftColumnContainer {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    order: 2;
+    display: none;
+  }
+}
 #mainContainer #resumeContainer #rightColumnContainer {
   height: 100%;
   display: flex;
   flex-direction: column;
   width: 75%;
+}
+@media (max-width: 500px) {
+  #mainContainer #resumeContainer #rightColumnContainer {
+    height: auto;
+    width: 100%;
+  }
 }
 .resumeLogoContainer {
   width: 100%;
@@ -239,6 +294,11 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 500px) {
+  .resumeLogoContainer {
+    display: none;
+  }
 }
 .resumeLogoContainer h2 {
   font-size: 40px;
@@ -285,6 +345,11 @@ a:hover {
   flex-flow: row wrap;
   background-color: #9b9b9b;
 }
+@media (max-width: 500px) {
+  #rightColumnContainer #titleContainer {
+    width: 100%;
+  }
+}
 #rightColumnContainer #titleContainer .labelMe {
   display: flex;
   justify-content: center;
@@ -313,8 +378,17 @@ a:hover {
 #rightColumnContainer .rightInformationContainer {
   color: #000;
 }
+.personalInformation.two {
+  display: none;
+}
+@media (max-width: 500px) {
+  .personalInformation.two {
+    display: block;
+  }
+}
 .personalInformation.two,
-.personalInformation.three {
+.personalInformation.three,
+.personalInformation.four {
   padding-top: 0px;
 }
 .personalInformation,
@@ -340,6 +414,28 @@ a:hover {
   letter-spacing: 1px;
   line-height: 20px;
   font-size: 14px;
+}
+.personalInformation .skillsContainer,
+.personalInformation.one .skillsContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+.personalInformation .skillsContainer ul,
+.personalInformation.one .skillsContainer ul {
+  width: 30%;
+}
+.personalInformation .skillsContainer ul li,
+.personalInformation.one .skillsContainer ul li {
+  padding-top: 5px;
+}
+.personalInformation .skillsContainer ul li a,
+.personalInformation.one .skillsContainer ul li a {
+  color: #000;
+  transition: all ease-in-out 150ms;
+}
+.personalInformation .skillsContainer ul li a:hover,
+.personalInformation.one .skillsContainer ul li a:hover {
+  color: #029cf5;
 }
 .personalInformation .workInformation,
 .personalInformation.one .workInformation {

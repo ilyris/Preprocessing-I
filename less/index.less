@@ -84,6 +84,10 @@ html, body {
     justify-content: center;
 	flex-direction: column;
 	color: @prim-white;
+
+	@media (max-width: 500px) {
+		height: auto;
+	}
 }
 
 h1,h2,h3,h4,h5 {
@@ -102,13 +106,33 @@ a:hover {
     width: 80%;
 	border-bottom: 1px solid #000;
 
+	@media (max-width: 500px) {
+		width: 100%;
+		flex-flow: row wrap;
+	  }
+	  #mainLogoContainer {
+		  @media (max-width: 500px) {
+			  width: 100%;
+		  }
+	  }
+
 	#mainLogo {
 		padding: 20px;
 		font-size: 26px;
+
+		@media(max-width: 500px) {
+			width: 100%;
+			text-align: center;
+		}
 	}
 	/* Main Navigation */
 	#mainNav {
 		width: 60%;
+
+		@media(max-width: 500px) {
+			width: 100%;
+			text-align: center;
+		}
 
 		#mainUl {
 			display: flex;
@@ -133,9 +157,18 @@ a:hover {
 	height: 950px;
 	background-color: @prim-white;
 
+	@media(max-width: 500px) {
+		width: 100%;
+		height: auto;
+	}
+
 	#resumeContainer {
 		display: flex;
 		height: 100%;
+
+		@media(max-width: 500px) {
+			flex-direction: column;
+		}
 
 		#leftColumnContainer {
 			height: 100%;
@@ -143,6 +176,14 @@ a:hover {
 			display: flex;
 			flex-flow: row wrap;
 			background-color: @primary-accent-color;
+
+			@media(max-width: 500px) {
+				width: auto;
+				height: auto;
+				flex-direction: column;
+				order: 2;
+				display: none;
+			}
 		}
 
 		#rightColumnContainer {
@@ -150,6 +191,11 @@ a:hover {
 			display: flex;
 			flex-direction: column;
 			width: 75%;
+
+			@media (max-width: 500px) {
+				height: auto;
+				width: 100%;
+			}
 		}
 	}
 }
@@ -157,6 +203,10 @@ a:hover {
     width: 100%;
     height: 20%;
 	.flex-center();
+
+	@media(max-width: 500px) {
+		display: none;
+	}
 	
 	h2 {
 		font-size: 40px;
@@ -202,11 +252,17 @@ a:hover {
     display: flex;
     flex-direction: column;
 	width: 500px;
+
+
 	
 	#titleContainer {
 		.flex-center();
 		flex-flow: row wrap;
 		background-color: @secondary-gray-background;
+
+		@media (max-width: 500px) {
+			width: 100%;
+		}
 
 		.labelMe {
 			display: flex;
@@ -239,8 +295,16 @@ a:hover {
 		color: #000;
 	}
 }
+.personalInformation.two {
+	display: none;
+
+	@media(max-width: 500px) {
+		display: block;
+	}
+}
 .personalInformation.two,
-.personalInformation.three {
+.personalInformation.three,
+.personalInformation.four {
 	padding-top: 0px;
 }
 .personalInformation,
@@ -263,6 +327,25 @@ a:hover {
 		letter-spacing: 1px;
 		line-height: 20px;
 		font-size: 14px;
+	}
+	.skillsContainer {
+		display: flex;
+		flex-flow: row wrap;
+
+		ul {
+			width: 30%;
+			li {
+				padding-top: 5px;
+				a {
+					color: #000;
+					transition: all ease-in-out 150ms;
+					
+					&:hover {
+						color: @hover-color;
+					}
+				}
+			}
+		}
 	}
 	.workInformation {
 		flex-flow: row wrap;
