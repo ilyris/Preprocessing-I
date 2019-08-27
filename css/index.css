@@ -4,18 +4,18 @@
 */
 /* Google fonts */
 @font-face {
-  font-family: 'Lobster';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v22/neILzCirqoswsqX9zoKmNg.ttf) format('truetype');
-}
-@font-face {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7CA.ttf) format('truetype');
 }
 html,
 body,
@@ -179,7 +179,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Lobster', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 a {
   transition: all ease-in-out 150ms;
@@ -393,7 +393,7 @@ a:hover {
 }
 .personalInformation,
 .personalInformation.one {
-  padding: 40px;
+  padding: 10px 20px;
 }
 .personalInformation .rightColumnInformationTitle,
 .personalInformation.one .rightColumnInformationTitle {
