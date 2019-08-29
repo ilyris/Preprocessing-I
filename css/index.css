@@ -1,1 +1,487 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* Google fonts */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459Wlhzg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Condensed'), local('RobotoCondensed-Regular'), url(https://fonts.gstatic.com/s/robotocondensed/v18/ieVl2ZhZI2eCN5jzbjEETS9weq8-19K7CA.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Montserrat', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+/* Mix-ins */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #cfcfcf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    height: auto;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+a {
+  transition: all ease-in-out 150ms;
+  color: #fff;
+}
+a:hover {
+  color: #029cf5;
+}
+/* Header */
+#mainHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  border-bottom: 1px solid #000;
+  /* Main Navigation */
+}
+@media (max-width: 500px) {
+  #mainHeader {
+    width: 100%;
+    flex-flow: row wrap;
+  }
+}
+@media (max-width: 500px) {
+  #mainHeader #mainLogoContainer {
+    width: 100%;
+  }
+}
+#mainHeader #mainLogo {
+  padding: 20px;
+  font-size: 26px;
+}
+@media (max-width: 500px) {
+  #mainHeader #mainLogo {
+    width: 100%;
+    text-align: center;
+  }
+}
+#mainHeader #mainNav {
+  width: 60%;
+}
+@media (max-width: 500px) {
+  #mainHeader #mainNav {
+    width: 100%;
+    text-align: center;
+  }
+}
+#mainHeader #mainNav #mainUl {
+  display: flex;
+  justify-content: space-evenly;
+}
+#mainHeader #mainNav #mainUl .mainLis {
+  padding: 20px;
+}
+#mainHeader #mainNav #mainUl .mainLis .mainAnchors {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+/* Resume Content */
+#mainContainer {
+  width: 900px;
+  margin: auto;
+  background-color: #fff;
+}
+@media (max-width: 500px) {
+  #mainContainer {
+    width: 100%;
+    height: auto;
+  }
+}
+#mainContainer #resumeContainer {
+  display: flex;
+  height: 100%;
+}
+@media (max-width: 500px) {
+  #mainContainer #resumeContainer {
+    flex-direction: column;
+  }
+}
+#mainContainer #resumeContainer #leftColumnContainer {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #1d254a;
+}
+@media (max-width: 500px) {
+  #mainContainer #resumeContainer #leftColumnContainer {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    order: 2;
+    display: none;
+  }
+}
+#mainContainer #resumeContainer #rightColumnContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+@media (max-width: 500px) {
+  #mainContainer #resumeContainer #rightColumnContainer {
+    height: auto;
+    width: 100%;
+  }
+}
+.resumeLogoContainer {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .resumeLogoContainer {
+    display: none;
+  }
+}
+.resumeLogoContainer h2 {
+  font-size: 40px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #1d254a;
+}
+.topDoubleInformationContainer {
+  width: 100%;
+  height: 35%;
+  text-align: right;
+  padding: 0 20px;
+}
+.topDoubleInformationContainer .leftColumInformationContainer {
+  width: 100%;
+  font-size: 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+.topDoubleInformationContainer .leftColumnUl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.topDoubleInformationContainer .leftColumnUl .leftColumnLi {
+  padding-top: 15px;
+  font-size: 12px;
+}
+#rightColumnContainer {
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+#rightColumnContainer #titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  background-color: #9b9b9b;
+}
+@media (max-width: 500px) {
+  #rightColumnContainer #titleContainer {
+    width: 100%;
+  }
+}
+#rightColumnContainer #titleContainer .labelMe {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-flow: column;
+  height: 200px;
+}
+#rightColumnContainer #titleContainer h2 {
+  font-size: 40px;
+  color: #1d254a;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#rightColumnContainer #titleContainer span {
+  width: 50px;
+  background-color: #000;
+  height: 3px;
+  margin: 0 auto;
+}
+#rightColumnContainer #titleContainer p {
+  font-size: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+#rightColumnContainer .rightInformationContainer {
+  color: #000;
+}
+.personalInformation.two {
+  display: none;
+}
+@media (max-width: 500px) {
+  .personalInformation.two {
+    display: block;
+  }
+}
+.personalInformation.two,
+.personalInformation.three,
+.personalInformation.four {
+  padding-top: 0px;
+}
+.personalInformation,
+.personalInformation.one {
+  padding: 40px;
+}
+.personalInformation .rightColumnInformationTitle,
+.personalInformation.one .rightColumnInformationTitle {
+  font-size: 24px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.personalInformation span,
+.personalInformation.one span {
+  width: 30px;
+  height: 3px;
+  background-color: #1d254a;
+  display: block;
+  margin-bottom: 20px;
+}
+.personalInformation .rightColumnTextContent,
+.personalInformation.one .rightColumnTextContent {
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-size: 14px;
+}
+.personalInformation .skillsContainer,
+.personalInformation.one .skillsContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+.personalInformation .skillsContainer ul,
+.personalInformation.one .skillsContainer ul {
+  width: 30%;
+}
+.personalInformation .skillsContainer ul li,
+.personalInformation.one .skillsContainer ul li {
+  padding-top: 5px;
+}
+.personalInformation .skillsContainer ul li a,
+.personalInformation.one .skillsContainer ul li a {
+  color: #000;
+  transition: all ease-in-out 150ms;
+}
+.personalInformation .skillsContainer ul li a:hover,
+.personalInformation.one .skillsContainer ul li a:hover {
+  color: #029cf5;
+}
+.personalInformation .workInformation,
+.personalInformation.one .workInformation {
+  flex-flow: row wrap;
+  display: flex;
+  justify-content: space-between;
+}
+.personalInformation .workInformation .employerInformation,
+.personalInformation.one .workInformation .employerInformation {
+  width: 27%;
+  border-right: 1px solid #000;
+  margin-right: 10px;
+  position: relative;
+  padding-top: 20px;
+}
+.personalInformation .workInformation .employerInformation:before,
+.personalInformation.one .workInformation .employerInformation:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  content: " ";
+  position: absolute;
+  background-color: #000;
+  right: -5px;
+  top: 40%;
+}
+.personalInformation .workInformation .employerInformation .jobTitle,
+.personalInformation.one .workInformation .employerInformation .jobTitle {
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.personalInformation .workInformation .employerInformation .employmentInfoirmation,
+.personalInformation.one .workInformation .employerInformation .employmentInfoirmation {
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+.personalInformation .workInformation .aboutTheJobInformation,
+.personalInformation.one .workInformation .aboutTheJobInformation {
+  width: 68%;
+  display: flex;
+  align-content: center;
+}
+.personalInformation .workInformation .aboutTheJobInformation p,
+.personalInformation.one .workInformation .aboutTheJobInformation p {
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+}
